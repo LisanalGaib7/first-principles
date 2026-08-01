@@ -1,21 +1,15 @@
-English | [한국어](#ai-skills-한국어)
+English | [한국어](#first-principles-한국어)
 
-# ai-skills
+# first-principles
 
-A collection of custom skills for [Claude Code](https://claude.ai/code) — reusable reasoning frameworks and workflows you can drop into `~/.claude/skills/`.
+A [Claude Code](https://claude.ai/code) skill for structured first-principles thinking. Instead of reasoning by analogy or convention, it decomposes a problem into irreducible ground truths and reasons back upward from there.
 
 ## Installation
 
 ```bash
-git clone https://github.com/LisanalGaib7/ai-skills.git
-cp -r ai-skills/skills/first-principles ~/.claude/skills/first-principles
+git clone https://github.com/LisanalGaib7/first-principles.git
+cp -r first-principles ~/.claude/skills/first-principles
 ```
-
-## Skills
-
-### first-principles
-
-A structured first-principles thinking skill. Instead of reasoning by analogy or convention, it decomposes a problem into irreducible ground truths and reasons back upward from there.
 
 **Structure**
 
@@ -88,22 +82,16 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-# ai-skills (한국어)
+# first-principles (한국어)
 
-[Claude Code](https://claude.ai/code)용 커스텀 스킬 모음. `~/.claude/skills/`에 그대로 넣어 쓸 수 있는 재사용 가능한 사고 프레임워크와 워크플로우를 모아둡니다.
+구조화된 1원칙(First Principles) 사고를 위한 [Claude Code](https://claude.ai/code) 스킬. 유추나 관행에 기대는 대신, 문제를 더 쪼갤 수 없는 근본 사실까지 분해한 뒤 거기서부터 다시 추론해 올라갑니다.
 
 ## 설치
 
 ```bash
-git clone https://github.com/LisanalGaib7/ai-skills.git
-cp -r ai-skills/skills/first-principles ~/.claude/skills/first-principles
+git clone https://github.com/LisanalGaib7/first-principles.git
+cp -r first-principles ~/.claude/skills/first-principles
 ```
-
-## 스킬 목록
-
-### first-principles
-
-구조화된 1원칙(First Principles) 사고 스킬. 유추나 관행에 기대는 대신, 문제를 더 쪼갤 수 없는 근본 사실까지 분해한 뒤 거기서부터 다시 추론해 올라갑니다.
 
 **구조**
 
