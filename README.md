@@ -1,0 +1,175 @@
+English | [한국어](#ai-skills-한국어)
+
+# ai-skills
+
+A collection of custom skills for [Claude Code](https://claude.ai/code) — reusable reasoning frameworks and workflows you can drop into `~/.claude/skills/`.
+
+## Installation
+
+```bash
+git clone https://github.com/LisanalGaib7/ai-skills.git
+cp -r ai-skills/skills/first-principles ~/.claude/skills/first-principles
+```
+
+## Skills
+
+### first-principles
+
+A structured first-principles thinking skill. Instead of reasoning by analogy or convention, it decomposes a problem into irreducible ground truths and reasons back upward from there.
+
+**Structure**
+
+```
+first-principles/
+├── SKILL.md                    # skill definition (frontmatter + methodology)
+├── examples/
+│   └── architecture-review.md  # worked example: microservices decision
+└── references/
+    ├── elon-musk-examples.md   # SpaceX / Tesla case studies
+    └── software-examples.md    # software engineering case studies
+```
+
+**How it triggers**
+
+The `description` field in `SKILL.md`'s frontmatter is matched against how you phrase a request. It fires on prompts like "analyze from first principles", "question this design", "is there a better solution" — and, since this fork adds bilingual support, on Korean equivalents like "1원칙으로 분석", "가정을 의심".
+
+**The 5-phase process**
+
+1. **Problem Essence** — strip away implementation details to state the real problem and success criteria
+2. **Challenge Assumptions** — list every assumption (technical / business / resource / historical) and test whether it's a real constraint or just convention
+3. **Ground Truths** — isolate the facts that cannot be decomposed further (physics, business invariants, user needs)
+4. **Reason Upward** — build the minimal solution that satisfies the ground truths, adding complexity only when it earns its place
+5. **Validate** — trace every design decision back to a ground truth; find the weak links
+
+**Output format**
+
+Every analysis follows a fixed template: Problem Essence → Assumptions Challenged (table) → Ground Truths → Reasoning Chain → Conclusion.
+
+**Worked example**
+
+> Prompt: *"Diesel supply is tight right now — where should we source diesel from?"*
+
+```markdown
+## First Principles Analysis: Diesel Sourcing Under Tight Refining Supply
+
+### 1. Problem Essence
+**Core problem:** Secure diesel volume reliably, at a defensible total cost (price + logistics + risk)
+**Success criteria:** No supply interruption at the required time and volume — not simply "lowest price"
+
+### 2. Assumptions Challenged
+| Assumption | Challenge | Verdict |
+|---|---|---|
+| "Buy from regions with the most refining capacity" | Those regions may restrict exports to secure domestic supply first | Revise |
+| "Time the spot market for a good deal" | The 3-2-1 crack spread hit an all-time high (~$64.58/bbl, July 2026); margins near $70/bbl — "buying cheap" isn't achievable right now | Discard |
+| "Buy directly from refiners" | Refiners are already running at 92–95% utilization — no spare capacity to allocate | Revise |
+| "Local sourcing is always better" | Logistics savings matter less than supply-continuity risk during a shortage | Keep, conditionally |
+
+### 3. Ground Truths
+- Global refining capacity has structurally shrunk (permanent closures + war damage cut ~4.5M bbl/day, -5.4%, in Q2 2026)
+- Refiners are near max utilization — no slack to absorb new demand
+- US diesel inventories are near 5-year lows
+
+### 4. Reasoning Chain
+Structural capacity loss + record-low inventory + record-high margins → no source is "cheap" right now → the optimization target shifts from price to *certainty of supply* → lock in volume via contracts, diversify across sources
+
+### 5. Conclusion
+**Recommended approach:** Shift from spot buying to mid/long-term offtake agreements; select sourcing regions by export-restriction risk, not raw refining capacity; diversify across multiple suppliers
+**Key insight:** "Where can we buy it cheap?" is the wrong question during a structural shortage — the right question is "where can we lock in volume?"
+**Trade-offs acknowledged:** Long-term contracts may look expensive if margins later fall; diversification adds coordination overhead
+```
+
+## Credits
+
+`first-principles` is adapted from [awesome-skills/first-principles-skill](https://github.com/awesome-skills/first-principles-skill) (MIT License), with bilingual (English/Korean) trigger phrases and output templates added.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+# ai-skills (한국어)
+
+[Claude Code](https://claude.ai/code)용 커스텀 스킬 모음. `~/.claude/skills/`에 그대로 넣어 쓸 수 있는 재사용 가능한 사고 프레임워크와 워크플로우를 모아둡니다.
+
+## 설치
+
+```bash
+git clone https://github.com/LisanalGaib7/ai-skills.git
+cp -r ai-skills/skills/first-principles ~/.claude/skills/first-principles
+```
+
+## 스킬 목록
+
+### first-principles
+
+구조화된 1원칙(First Principles) 사고 스킬. 유추나 관행에 기대는 대신, 문제를 더 쪼갤 수 없는 근본 사실까지 분해한 뒤 거기서부터 다시 추론해 올라갑니다.
+
+**구조**
+
+```
+first-principles/
+├── SKILL.md                    # 스킬 정의 (frontmatter + 방법론)
+├── examples/
+│   └── architecture-review.md  # 완성 예시: 마이크로서비스 도입 여부 분석
+└── references/
+    ├── elon-musk-examples.md   # 스페이스X, 테슬라 사례
+    └── software-examples.md    # 소프트웨어 엔지니어링 적용 사례
+```
+
+**트리거 방식**
+
+`SKILL.md` frontmatter의 `description` 필드가 요청 문구와 매칭되어 자동 실행됩니다. "analyze from first principles", "question this design", "is there a better solution" 같은 영어 문구뿐 아니라, 이 포크에서 추가한 "1원칙으로 분석", "가정을 의심" 같은 한국어 문구로도 트리거됩니다.
+
+**5단계 프로세스**
+
+1. **문제의 본질** — 구현 디테일을 걷어내고 진짜 문제와 성공 기준을 정의
+2. **가정 도전** — 기술/비즈니스/리소스/역사적 가정을 전부 나열하고, 진짜 제약인지 그냥 관행인지 검증
+3. **근본 사실** — 더 쪼갤 수 없는 사실(물리 법칙, 비즈니스 불변식, 유저 니즈)만 남김
+4. **상향 추론** — 근본 사실을 만족하는 최소 해법을 만들고, 정당화될 때만 복잡도를 추가
+5. **검증** — 모든 설계 결정이 근본 사실까지 역추적되는지 확인하고 약한 고리를 찾음
+
+**출력 포맷**
+
+모든 분석은 고정된 템플릿을 따릅니다: 문제의 본질 → 도전한 가정(표) → 근본 사실 → 추론 사슬 → 결론.
+
+**실제 적용 예시**
+
+> 질문: *"정유 공급이 타이트한 지금, 디젤을 어디서 소싱하는 게 좋을까?"*
+
+```markdown
+## 1원칙 분석: 정유 공급 타이트 국면에서의 디젤 소싱 전략
+
+### 1. 문제의 본질
+**핵심 문제:** 안정적인 물량과 합리적인 총비용(가격+물류+리스크)으로 디젤을 확보하는 것
+**성공 기준:** 공급 중단 없이 필요 시점에 필요 물량을 받는 것 (단순히 "싸게 사는 것"이 아님)
+
+### 2. 도전한 가정
+| 가정 | 왜 의심하는가 | 판정 |
+|------|--------------|------|
+| "정제능력 큰 지역에서 사면 된다" | 그 지역들도 자국 우선 확보를 위해 수출을 제한할 수 있음 | 수정 필요 |
+| "현물시장에서 타이밍 봐서 유리하게 살 수 있다" | 2026년 7월 기준 3-2-1 크랙스프레드가 사상 최고치(~$64.58/bbl), 마진 ~$70/bbl → "싸게" 사겠다는 목표 자체가 성립 불가 | 폐기 |
+| "정유사에서 직접 사는 게 최선이다" | 가동률이 이미 92~95%로 여유 캐파가 없음 | 수정 필요 |
+| "가까운 곳에서 사는 게 무조건 유리하다" | 물류비 절감보다 공급 중단 리스크 회피가 지금은 더 큰 변수 | 조건부 유지 |
+
+### 3. 근본 사실
+- 전 세계 정제능력이 구조적으로 축소 중 (영구 폐쇄 + 전쟁 피해로 2026년 2분기 일산 450만 배럴, -5.4% 감소)
+- 정유사 가동률이 92~95%로 이미 상한 근접 → 여유 물량 없음
+- 미국 디젤 재고가 5년래 최저치
+
+### 4. 추론 사슬
+구조적 캐파 축소 + 재고 최저 + 마진 사상최고 → 지금 "싸게" 구할 소스는 없음 → 최적화 목표가 가격에서 확보 가능성으로 전환 → 계약으로 물량을 먼저 잠그고 소스를 다변화
+
+### 5. 결론
+**권고안:** 현물 구매 대신 중장기 오프테이크 계약으로 물량 우선 확보, 소싱 지역은 정제능력이 아니라 수출규제 리스크로 재선정, 복수 소스 다변화
+**핵심 통찰:** "어디서 싸게 살까"는 구조적 공급 부족기엔 성립하지 않는 질문. "어디서 물량을 잠글 수 있나"가 맞는 질문
+**감수하는 트레이드오프:** 장기계약은 이후 마진 하락 시 비싸 보일 수 있음, 다변화는 관리 복잡도를 늘림
+```
+
+## 출처
+
+`first-principles`는 [awesome-skills/first-principles-skill](https://github.com/awesome-skills/first-principles-skill)(MIT License)을 기반으로, 영어/한국어 이중언어 트리거 문구와 출력 템플릿을 추가한 버전입니다.
+
+## 라이선스
+
+MIT — [LICENSE](LICENSE) 참고.
