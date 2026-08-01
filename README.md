@@ -2,13 +2,25 @@ English | [한국어](#first-principles-한국어)
 
 # first-principles
 
-A [Claude Code](https://claude.ai/code) skill for structured first-principles thinking. Instead of reasoning by analogy or convention, it decomposes a problem into irreducible ground truths and reasons back upward from there.
+A skill for structured first-principles thinking, built on the [Agent Skills](https://claude.ai/code) format (`SKILL.md` + frontmatter) shared by Claude Code, Codex CLI, Cursor, Gemini CLI, and other compatible coding agents. Instead of reasoning by analogy or convention, it decomposes a problem into irreducible ground truths and reasons back upward from there.
 
 ## Installation
 
+Clone the repo, then copy it into whichever agent's skills directory you use:
+
 ```bash
 git clone https://github.com/LisanalGaib7/first-principles.git
-cp -r first-principles ~/.claude/skills/first-principles
+```
+
+| Agent | Skills directory |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex CLI | `~/.codex/skills/` |
+| Cursor / others | check that agent's docs for its skills path |
+
+```bash
+cp -r first-principles ~/.claude/skills/first-principles   # Claude Code
+cp -r first-principles ~/.codex/skills/first-principles    # Codex CLI
 ```
 
 **Structure**
@@ -84,13 +96,25 @@ MIT — see [LICENSE](LICENSE).
 
 # first-principles (한국어)
 
-구조화된 1원칙(First Principles) 사고를 위한 [Claude Code](https://claude.ai/code) 스킬. 유추나 관행에 기대는 대신, 문제를 더 쪼갤 수 없는 근본 사실까지 분해한 뒤 거기서부터 다시 추론해 올라갑니다.
+구조화된 1원칙(First Principles) 사고 스킬. Claude Code, Codex CLI, Cursor, Gemini CLI 등 여러 코딩 에이전트가 공유하는 [Agent Skills](https://claude.ai/code) 포맷(`SKILL.md` + frontmatter) 위에 만들어져 특정 도구에 종속되지 않습니다. 유추나 관행에 기대는 대신, 문제를 더 쪼갤 수 없는 근본 사실까지 분해한 뒤 거기서부터 다시 추론해 올라갑니다.
 
 ## 설치
 
+레포를 clone한 뒤, 쓰는 에이전트의 스킬 디렉터리에 복사하면 됩니다.
+
 ```bash
 git clone https://github.com/LisanalGaib7/first-principles.git
-cp -r first-principles ~/.claude/skills/first-principles
+```
+
+| 에이전트 | 스킬 디렉터리 |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex CLI | `~/.codex/skills/` |
+| Cursor 등 | 해당 도구 문서에서 스킬 경로 확인 |
+
+```bash
+cp -r first-principles ~/.claude/skills/first-principles   # Claude Code
+cp -r first-principles ~/.codex/skills/first-principles    # Codex CLI
 ```
 
 **구조**
