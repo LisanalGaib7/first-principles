@@ -63,12 +63,12 @@ Every analysis follows a fixed template: Problem Essence → Assumptions Challen
 **Success criteria:** No supply interruption at the required time and volume — not simply "lowest price"
 
 ### 2. Assumptions Challenged
-| Assumption | Challenge | Verdict |
-|---|---|---|
-| "Buy from regions with the most refining capacity" | Those regions may restrict exports to secure domestic supply first | Revise |
-| "Time the spot market for a good deal" | The 3-2-1 crack spread hit an all-time high (~$64.58/bbl, July 2026); margins near $70/bbl — "buying cheap" isn't achievable right now | Discard |
-| "Buy directly from refiners" | Refiners are already running at 92–95% utilization — no spare capacity to allocate | Revise |
-| "Local sourcing is always better" | Logistics savings matter less than supply-continuity risk during a shortage | Keep, conditionally |
+| Assumption | Challenge | Evidence / How to Verify | Verdict |
+|---|---|---|---|
+| "Buy from regions with the most refining capacity" | Do those regions actually let the volume leave, or keep it for themselves first? | Structural capacity loss raises the odds producer nations prioritize domestic supply and restrict exports during a shortage | Modify |
+| "Time the spot market for a good deal" | Can we wait for a dip and buy cheap? | 3-2-1 crack spread at an all-time high (~$64.58/bbl, July 2026); refining margins near $70/bbl | Discard |
+| "Buy directly from refiners" | Do refiners have spare capacity to sell us more? | Refiners running at 92–95% utilization — no slack to allocate | Modify |
+| "Local sourcing is always better" | Does proximity outweigh availability risk? | Refining capacity and inventory data point to a structural, not temporary, shortage — continuity risk dominates logistics savings | Keep |
 
 ### 3. Ground Truths
 - Global refining capacity has structurally shrunk (permanent closures + war damage cut ~4.5M bbl/day, -5.4%, in Q2 2026)
@@ -157,12 +157,12 @@ first-principles/
 **성공 기준:** 공급 중단 없이 필요 시점에 필요 물량을 받는 것 (단순히 "싸게 사는 것"이 아님)
 
 ### 2. 도전한 가정
-| 가정 | 왜 의심하는가 | 판정 |
-|------|--------------|------|
-| "정제능력 큰 지역에서 사면 된다" | 그 지역들도 자국 우선 확보를 위해 수출을 제한할 수 있음 | 수정 필요 |
-| "현물시장에서 타이밍 봐서 유리하게 살 수 있다" | 2026년 7월 기준 3-2-1 크랙스프레드가 사상 최고치(~$64.58/bbl), 마진 ~$70/bbl → "싸게" 사겠다는 목표 자체가 성립 불가 | 폐기 |
-| "정유사에서 직접 사는 게 최선이다" | 가동률이 이미 92~95%로 여유 캐파가 없음 | 수정 필요 |
-| "가까운 곳에서 사는 게 무조건 유리하다" | 물류비 절감보다 공급 중단 리스크 회피가 지금은 더 큰 변수 | 조건부 유지 |
+| 가정 | 왜 의심하는가 | 근거/확인방법 | 판정 |
+|------|--------------|--------------|------|
+| "정제능력 큰 지역에서 사면 된다" | 그 지역이 실제로 물량을 내보낼까, 자국 우선으로 묶어둘까? | 정제능력이 구조적으로 축소된 상황에서는 생산국이 자국 공급을 우선해 수출을 제한할 가능성이 커짐 | 수정 |
+| "현물시장에서 타이밍 봐서 유리하게 살 수 있다" | 눌렸다가 쌀 때 살 수 있나? | 2026년 7월 기준 3-2-1 크랙스프레드 사상 최고치(~$64.58/bbl), 마진 ~$70/bbl | 폐기 |
+| "정유사에서 직접 사는 게 최선이다" | 정유사에 우리에게 더 팔 여유 물량이 있나? | 가동률 92~95% — 배분할 여유 캐파 없음 | 수정 |
+| "가까운 곳에서 사는 게 무조건 유리하다" | 근접성이 조달 리스크보다 중요한가? | 정제능력·재고 데이터가 일시적이 아니라 구조적 부족을 가리킴 — 물류비 절감보다 공급 연속성 리스크가 더 큰 변수 | 유지 |
 
 ### 3. 근본 사실
 - 전 세계 정제능력이 구조적으로 축소 중 (영구 폐쇄 + 전쟁 피해로 2026년 2분기 일산 450만 배럴, -5.4% 감소)
