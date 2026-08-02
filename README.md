@@ -86,7 +86,7 @@ Structural capacity loss + record-low inventory + record-high margins → no sou
 
 ## Credits
 
-`first-principles` is adapted from [awesome-skills/first-principles-skill](https://github.com/awesome-skills/first-principles-skill) (MIT License), with bilingual (English/Korean) trigger phrases and output templates added.
+`first-principles` is adapted from [awesome-skills/first-principles-skill](https://github.com/awesome-skills/first-principles-skill) (MIT License), with bilingual (English/Korean) trigger phrases and output templates added, plus an Evidence/How-to-Verify column on the assumptions table so a Keep/Discard/Modify verdict requires an actual observation rather than a guess.
 
 ## License
 
@@ -180,7 +180,7 @@ first-principles/
 
 ## 출처
 
-`first-principles`는 [awesome-skills/first-principles-skill](https://github.com/awesome-skills/first-principles-skill)(MIT License)을 기반으로, 영어/한국어 이중언어 트리거 문구와 출력 템플릿을 추가한 버전입니다.
+`first-principles`는 [awesome-skills/first-principles-skill](https://github.com/awesome-skills/first-principles-skill)(MIT License)을 기반으로, 영어/한국어 이중언어 트리거 문구와 출력 템플릿을 추가한 버전입니다. 여기에 가정 표에 "근거/확인방법" 열을 더해, 판정(유지/폐기/수정)을 내리려면 추측이 아니라 실제로 관측한 근거가 있어야 하도록 만들었습니다.
 
 ## 라이선스
 

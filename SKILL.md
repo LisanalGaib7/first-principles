@@ -1,7 +1,7 @@
 ---
-name: First Principles Thinking
+name: first-principles
 description: This skill should be used when the user asks to "analyze from first principles", "think from scratch", "question this design", "is this the right approach", "why are we doing it this way", "is there a better solution", "challenge assumptions", or in Korean "1원칙으로 분석", "제1원리", "근본부터 다시", "원점에서 다시 생각", "이 설계 합리적인가", "이 방향이 맞나", "왜 이렇게 하는 건가", "더 나은 방법 없나", "가정을 의심", or needs to evaluate architectural decisions, design choices, or problem-solving approaches without relying on analogies or conventions.
-version: 0.2.0
+version: 0.3.0
 ---
 
 # First Principles Thinking
@@ -103,9 +103,11 @@ When applying first principles thinking, structure the analysis as:
 **Success criteria:** [Measurable outcomes]
 
 ### 2. Assumptions Challenged
-| Assumption | Challenge | Verdict |
-|------------|-----------|---------|
-| [Assumption] | [Why question it] | [Keep/Discard/Modify] |
+| Assumption | Challenge | Evidence / How to Verify | Verdict |
+|------------|-----------|---------------------------|---------|
+| [Assumption] | [Why question it] | [What was actually observed: code, logs, docs, numbers] | [Keep/Discard/Modify/Unverified] |
+
+> A Keep/Discard/Modify verdict requires a non-empty Evidence cell. If nothing was actually observed, the verdict stays **Unverified**.
 
 ### 3. Ground Truths
 - [Irreducible fact 1]
@@ -133,9 +135,11 @@ Write the analysis in the language the user is using. For Korean users, use the 
 **성공 기준:** [측정 가능한 결과]
 
 ### 2. 도전한 가정
-| 가정 | 왜 의심하는가 | 판정 |
-|------|--------------|------|
-| [가정] | [의심 근거] | [유지/폐기/수정] |
+| 가정 | 왜 의심하는가 | 근거/확인방법 | 판정 |
+|------|--------------|--------------|------|
+| [가정] | [의심 근거] | [실제로 확인한 것: 코드, 로그, 문서, 수치] | [유지/폐기/수정/확인 필요] |
+
+> 유지, 폐기, 수정 판정은 근거/확인방법 칸이 채워져 있을 때만 내립니다. 실제로 관측한 게 없으면 판정은 **확인 필요**로 남깁니다.
 
 ### 3. 근본 사실
 - [더 쪼갤 수 없는 사실 1]
